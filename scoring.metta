@@ -93,6 +93,7 @@
 ; ;!(collapse (match &self ($val) $val))
 ; !(replaceWithTruth (AND A (OR B C)))
 
+; function to calculate the fitness of the expression
 (= (fitness $expr $expectedResults $rows)
     (if (== $rows ())
         0
@@ -112,4 +113,4 @@
 
 ; !(addToSpace ())
 
-!(fitness (AND A (OR B C) (AND D E)) (True False True) (((A True) (B False) (C True) (D True) (E True)) ((A False) (B False) (C True) (D True) (E True)) ((A False) (B False) (C False) (D False) (E False))))
+; !(fitness (AND A (OR B C) (AND D E)) (True False True) (((A True) (B False) (C True) (D True) (E True)) ((A False) (B False) (C True) (D True) (E True)) ((A False) (B False) (C False) (D False) (E False))))
