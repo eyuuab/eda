@@ -5,14 +5,14 @@
 
 
 ;add elements of the row to space
-(= (addToSpace $row)
+(= (addToSpace $row $space)
     (if (== $row ())
         ()
         (let*
             (($head (car-atom $row))
              ($tail (addToSpace (cdr-atom $row)))
             )
-            (add-atom &self ($head))
+            (add-atom $space ($head))
         )
     )
 )
@@ -108,6 +108,13 @@
         )
         (+ $rowFitness $remainingFitness)
         )
+    )
+)
+
+
+(= (complexity $expr)
+    (
+        
     )
 )
 
